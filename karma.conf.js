@@ -1,3 +1,5 @@
+var path    = require('path');
+
 module.exports = function (config) {
   config.set({
     // base path used to resolve all patterns
@@ -32,7 +34,11 @@ module.exports = function (config) {
         loaders: [
           { test: /\.js/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
           { test: /\.html/, loader: 'raw' },
-          { test: /\.styl$/, loader: 'style!css!stylus' },
+          { test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff' },
+          { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
+          { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
+          { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
+          { test: /\.(sass|scss)$/, loader: 'style!css!sass?includePaths[]=' + path.resolve(__dirname, './node_modules/compass-mixins/lib')},
           { test: /\.css$/, loader: 'style!css' }
         ]
       }

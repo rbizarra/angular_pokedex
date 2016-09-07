@@ -1,12 +1,12 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import Pokemonlist from './pokemonlist/pokemonlist';
+import Pokemonview from './pokemonview/pokemonview';
 
 let componentModule = angular.module('app.components', [
-  Home,
-  About
+  Pokemonlist,
+  Pokemonview
 ])
-  
+
 .name;
 
 export default componentModule;
