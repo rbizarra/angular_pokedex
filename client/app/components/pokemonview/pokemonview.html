@@ -2,7 +2,7 @@
   <div class="row top-pokemon-navigator">
     <a
       ng-show="$ctrl.currPokemon.id > 1"
-      href="//pokemonview/{{$ctrl.prevPokemon.id}}"
+      ui-sref="pokemonview({id: $ctrl.prevPokemon.id})"
     >
       <span class="id"># {{$ctrl.prevPokemon.id}}</span>
       <b>{{$ctrl.prevPokemon.name}}</b>
@@ -10,7 +10,7 @@
     <a
       ng-show="$ctrl.currPokemon.id < 151"
       class="pull-right"
-      href="//pokemonview/{{$ctrl.nextPokemon.id}}"
+      ui-sref="pokemonview({id: $ctrl.nextPokemon.id})"
     >
       <b>{{$ctrl.nextPokemon.name}}</b>
       <span class="id"># {{$ctrl.nextPokemon.id}}</span>
@@ -21,12 +21,6 @@
     {{$ctrl.currPokemon.name}}
   </h1>
 
-  <!--<pre>{{$ctrl.prevPokemon}}</pre>
-  <pre>{{$ctrl.currPokemon}}</pre>
-  <pre>{{$ctrl.nextPokemon}}</pre>-->
-
-<!--ng-src='http://pokeunlock.com/wp-content/uploads/2015/01/{{$ctrl.pokemon.id | threeNumbersAlways}}.png'-->
-
   <div class="pokemon-info">
     <div class="left-col">
       <div
@@ -34,7 +28,7 @@
       >
           <div class="img-cnt">
             <img
-              ng-src="http://pokeunlock.com/wp-content/uploads/2015/01/{{$ctrl.currPokemon.id | threeNumbersAlways}}.png"
+              ng-src="//pokeunlock.com/wp-content/uploads/2015/01/{{$ctrl.currPokemon.id | threeNumbersAlways}}.png"
               onerror='this.style.display = "none"'
             />
           </div>

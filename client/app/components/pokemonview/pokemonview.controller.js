@@ -15,7 +15,7 @@ class PokemonviewController {
 
   getPokemon(apiService, id, offset) {
     var newId = parseInt(id) + parseInt(offset);
-    var url = 'http://pokeapi.co/api/v2/pokemon/' + newId;
+    var url = '//pokeapi.co/api/v2/pokemon/' + newId;
 
     apiService.getPokemon(url, (err, pokemon) => {
       if(parseInt(offset) == -1) {

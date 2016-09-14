@@ -16,7 +16,7 @@ let PokeApiService = function ($http) {
     };
 
     let getDescription = (id, cb) => {
-      var url = "http://pokeapi.co/api/v2/characteristic/" + id;
+      var url = "//pokeapi.co/api/v2/characteristic/" + id;
 
       // get the description from the inputed url
       $http({
@@ -86,7 +86,7 @@ let PokeApiService = function ($http) {
       // with a limit of 12 and an inputed offset
       $http({
         method: 'GET',
-        url: 'http://pokeapi.co/api/v2/pokemon/?limit=12&offset='+offset
+        url: '//pokeapi.co/api/v2/pokemon/?limit=12&offset='+offset
       }).then((response) => {
 
         // these variables will help us keep track of how many
