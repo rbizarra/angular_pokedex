@@ -4,8 +4,8 @@ var config  = require('./webpack.config');
 
 config.output = {
   filename: '[name].bundle.js',
-  publicPath: '',
-  path: path.resolve(__dirname, 'dist')
+  publicPath: 'pokedex/',
+  path: path.resolve(__dirname, 'docs')
 };
 
 config.plugins = config.plugins.concat([

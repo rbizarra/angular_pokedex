@@ -11,7 +11,7 @@ let pokemonviewModule = angular.module('pokemonview', [
 
       $stateProvider
         .state('pokemonview', {
-          url: '/pokemonview',
+          url: '/pokemonview/:id', //<-- ':id' added 
           component: 'pokemonview'
         });
     })
