@@ -2,7 +2,7 @@
   <div class="row top-pokemon-navigator">
     <a
       ng-show="$ctrl.currPokemon.id > 1"
-      href="http://localhost:3000/pokemonview/{{$ctrl.prevPokemon.id}}"
+      href="//pokemonview/{{$ctrl.prevPokemon.id}}"
     >
       <span class="id"># {{$ctrl.prevPokemon.id}}</span>
       <b>{{$ctrl.prevPokemon.name}}</b>
@@ -10,7 +10,7 @@
     <a
       ng-show="$ctrl.currPokemon.id < 151"
       class="pull-right"
-      href="http://localhost:3000/pokemonview/{{$ctrl.nextPokemon.id}}"
+      href="//pokemonview/{{$ctrl.nextPokemon.id}}"
     >
       <b>{{$ctrl.nextPokemon.name}}</b>
       <span class="id"># {{$ctrl.nextPokemon.id}}</span>
