@@ -4,7 +4,7 @@ var config  = require('./webpack.config');
 
 config.output = {
   filename: '[name].bundle.js',
-  publicPath: 'pokedex/',
+  publicPath: 'angular_pokedex/',
   path: path.resolve(__dirname, 'docs')
 };
 
